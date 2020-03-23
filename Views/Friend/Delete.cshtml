@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Friend
+@{
+    ViewData["Title"] = "Friend";
+}
+<h1>Delete a Friend</h1>
+
+<fieldset>
+
+    <form asp-action="Delete" asp-controller="Friend">
+
+        <div asp-validation-summary="ModelOnly" class="input-validation-error"></div>
+
+
+        <p>
+            <label asp-for="FriendId"></label>
+            <input asp-for="FriendId" class="form-control" placeholder="" />
+            <span asp-validation-for="FriendId"></span>
+        </p>
+
+        <p>
+            <button type="submit">Update</button>
+        </p>
+
+    </form>
+
+</fieldset>

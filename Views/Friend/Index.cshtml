@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<Friend>
+@{
+}
+<h1>View Friends</h1>
+
+<div class="friends">
+    <table border="1">
+        <tr>
+            <th>FriendId</th>
+            <th>FriendName</th>
+            <th>Place</th>
+        </tr>
+
+        @foreach (var friend in Model)
+        {
+            <tr>
+                <td>@friend.FriendId</td>
+
+                <td>@friend.FriendName</td>
+
+                <td>@friend.Place</td>
+            </tr>
+
+        }
+    </table>
+</div>

@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model Friend
+@{
+    ViewData["Title"] = "Friend";
+}
+<h1>Update a Friend</h1>
+
+<fieldset>
+
+    <form asp-action="Update" asp-controller="Friend">
+
+        <div asp-validation-summary="ModelOnly" class="input-validation-error"></div>
+
+
+        <p>
+            <label asp-for="FriendId"></label>
+            <input asp-for="FriendId" class="form-control" placeholder="" />
+            <span asp-validation-for="FriendId"></span>
+        </p>
+
+        <p>
+            <label asp-for="FriendName"></label>
+            <input asp-for="FriendName" class="form-control" placeholder="">
+            <span asp-validation-for="FriendName"></span>
+        </p>
+        <p>
+            <label asp-for="Place"></label>
+            <input asp-for="Place" class="form-control" placeholder="">
+            <span asp-validation-for="Place"></span>
+        </p>
+
+        <p>
+            <button type="submit">Update</button>
+            <button type="reset" >Back</button>
+        </p>
+
+    </form>
+
+</fieldset>
